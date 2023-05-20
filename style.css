@@ -1,5 +1,14 @@
-@import url(https://db.onlinewebfonts.com/c/4c19fc875e7ba1e6831129de3ab5ac0b?family=Retro+Gaming);
-@import url(https://db.onlinewebfonts.com/c/e27155165d789ca1300fec4deb1263ee?family=Pixel+Emulator);
+@font-face {
+    font-family: 'Pixel Emulator';
+    src:url('fonts/Pixel-Emulator/Pixel-Emulator.woff') format('woff'),
+        url('fonts/Pixel-Emulator/Pixel-Emulator.ttf') format('truetype');
+  }
+
+@font-face {
+    font-family: 'Retro Gaming';
+    src:url('fonts/Retro-Gaming/Retro-Gaming.woff') format('woff'),
+        url('fonts/Retro-Gaming/Retro-Gaming.ttf') format('truetype');
+  }
 
 *{
     box-sizing: border-box;
@@ -7,6 +16,7 @@
 
 html{
     background-color: #6C757D;
+    margin: 0px;
 }
 
 .game{
@@ -103,3 +113,15 @@ header h1{
     flex-direction: column;
     align-items: center;
 }
+
+footer a{
+    display: flex;
+    flex-direction: column;
+    font-family: 'Pixel Emulator', sans-serif;
+    font-size: 10px;
+    color: tomato;
+    text-decoration: none;
+    margin-top: 20px;
+    align-items: center;
+}
+
