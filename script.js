@@ -24,33 +24,33 @@ function playGame(playerSelection, computerSelection){
     if (playerSelection === 'Rock'){
         if(computerSelection === 'Paper'){
             computerScore++;
-            optext = 'You Lose! Paper beats Rock';
+            optext = 'You Lose, Paper beats Rock';
         }
         else{
             playerScore++;
-            optext = 'You Win! Rock beats Scissors';
+            optext = 'You Win, Rock beats Scissors';
         }
     }
 
     if(playerSelection === 'Paper'){
         if(computerSelection === 'Rock'){
             playerScore++;
-            optext = 'You Win! Paper beats Rock';
+            optext = 'You Win, Paper beats Rock';
         }
         else{
             computerScore++;
-            optext = 'You Lose! Scissors beats Paper';
+            optext = 'You Lose, Scissors beats Paper';
         }
     }
 
     if(playerSelection === 'Scissors'){
         if(computerSelection === 'Rock'){
             computerScore++;
-            optext = 'You Lose! Rock beats Scissors';
+            optext = 'You Lose, Rock beats Scissors';
         }
         else{
             playerScore++;
-            optext = 'You Win! Scissors beats Paper';
+            optext = 'You Win, Scissors beats Paper';
         }
     }
 }
