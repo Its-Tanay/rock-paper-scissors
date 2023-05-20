@@ -9,45 +9,48 @@ const paperButton = document.querySelector('#paper');
 const scissorsButton = document.querySelector('#scissors');
 const scoreElement1 = document.getElementById('player-score');
 const scoreElement2 = document.getElementById('computer-score');
+const scoreElement3 = document.getElementById('result');
+
 let playerScore = 0;
 let computerScore = 0; 
+let optext = '';
 
 function playGame(playerSelection, computerSelection){
 
     if (playerSelection === computerSelection){
-        return 'Tie';
+        optext = 'Tie';
     }
 
     if (playerSelection === 'Rock'){
         if(computerSelection === 'Paper'){
             computerScore++;
-            return 'You Lose! Paper beats Rock';
+            optext = 'You Lose! Paper beats Rock';
         }
         else{
             playerScore++;
-            return 'You Win! Rock beats Scissors';
+            optext = 'You Win! Rock beats Scissors';
         }
     }
 
     if(playerSelection === 'Paper'){
         if(computerSelection === 'Rock'){
             playerScore++;
-            return 'You Win! Paper beats Rock';
+            optext = 'You Win! Paper beats Rock';
         }
         else{
             computerScore++;
-            return 'You Lose! Scissors beats Paper';
+            optext = 'You Lose! Scissors beats Paper';
         }
     }
 
     if(playerSelection === 'Scissors'){
         if(computerSelection === 'Rock'){
             computerScore++;
-            return 'You Lose! Rock beats Scissors';
+            optext = 'You Lose! Rock beats Scissors';
         }
         else{
             playerScore++;
-            return 'You Win! Scissors beats Paper';
+            optext = 'You Win! Scissors beats Paper';
         }
     }
 }
@@ -60,6 +63,7 @@ function game(){
             console.log(result);
             scoreElement1.textContent = playerScore;
             scoreElement2.textContent = computerScore;
+            scoreElement3.textContent = optext;
             checkResult();
         });
 
@@ -69,6 +73,7 @@ function game(){
             console.log(result);
             scoreElement1.textContent = playerScore;
             scoreElement2.textContent = computerScore;
+            scoreElement3.textContent = optext;
             checkResult();
         });
 
@@ -78,16 +83,19 @@ function game(){
             console.log(result);
             scoreElement1.textContent = playerScore;
             scoreElement2.textContent = computerScore;
+            scoreElement3.textContent = optext;
             checkResult();
         });
 
         function checkResult(){
             if(playerScore === 5){
-                alert('You win!');
+                optext = 'You win!';
+                scoreElement3.textContent = optext;
                 resetScore();
             }
             else if(computerScore === 5){
-                alert('You lose!');
+                optext = 'You lose!';
+                scoreElement3.textContent = optext;
                 resetScore();
             }   
         };
